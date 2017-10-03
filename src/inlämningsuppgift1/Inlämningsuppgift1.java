@@ -12,11 +12,11 @@ public class Inlämningsuppgift1 {
 	
 	public void backEnd() {
 		List<Matning> djuren = new ArrayList<>();
-		Hund sixten = new Hund("Sixten", 5);
-		Hund dogge = new Hund("Dogge", 10);
-		Katt venus= new Katt("Venus", 5);
-		Katt ove= new Katt("Ove", 3);
-		Orm hypno= new Orm("Hypno", 1);
+		Matning sixten = new Hund("Sixten", 5);
+		Matning dogge = new Hund("Dogge", 10);
+		Matning venus= new Katt("Venus", 5);
+		Matning ove= new Katt("Ove", 3);
+		Matning hypno= new Orm("Hypno", 1);
 		
 		djuren.add(ove);
 		djuren.add(venus);
@@ -27,7 +27,7 @@ public class Inlämningsuppgift1 {
 		String s = (JOptionPane.showInputDialog("Vem vill du mata: "));
 		
 		for (int i = 0; i < djuren.size(); i++) {
-			if(s.toLowerCase().equals(djuren.get(i).getNamn().toLowerCase())) {
+			if(s.equalsIgnoreCase(djuren.get(i).getNamn())) { //här används polymorfism där interfacet känner av vilket slags djur det är och ger dess skepnad i form av givna metod ".getNamn()"
 			System.out.println(djuren.get(i).printMe());
 			break;
 			}

@@ -12,7 +12,7 @@ public class Hund extends Djur implements Matning{
 	}
 	@Override
 	public double antalMat() {
-		antaletMat = vikt/100*1000;
+		antaletMat = vikt/100*1000; //dynamisk bindning, det letar efter den metod som passar "bäst", annars går den uppåt till superklassens metod
 		return antaletMat;
 	}
 	@Override

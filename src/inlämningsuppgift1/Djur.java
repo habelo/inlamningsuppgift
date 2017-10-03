@@ -1,6 +1,6 @@
 package inlämningsuppgift1;
 
-abstract public class Djur{
+abstract public class Djur{  //inkappsling, går ej komma åt eftersom det är protected
 	protected String namn;
 	protected double vikt;
 	protected String föda;
@@ -13,7 +13,7 @@ abstract public class Djur{
 		this.vikt=vikt;
 	}
 
-	public abstract String printMe();
-	public abstract String getNamn();
+	protected abstract String printMe();
+	protected abstract String getNamn();
 
 }
