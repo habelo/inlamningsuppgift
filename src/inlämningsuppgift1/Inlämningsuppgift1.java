@@ -28,7 +28,7 @@ public class Inlämningsuppgift1 {
 		
 		for (int i = 0; i < djuren.size(); i++) {
 			if(s.equalsIgnoreCase(djuren.get(i).getNamn())) { //här används polymorfism där interfacet känner av vilket slags djur det är och ger dess skepnad i form av givna metod ".getNamn()"
-			System.out.println(djuren.get(i).printMe());
+			JOptionPane.showMessageDialog(null, djuren.get(i).printMe());
 			break;
 			}
 			
